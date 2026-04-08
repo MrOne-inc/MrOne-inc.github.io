@@ -31,6 +31,20 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
+        <div class="theme-switcher" id="themeSwitcher">
+          <button class="theme-btn" data-theme="dark" title="Dark" aria-label="Dark mode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button class="theme-btn" data-theme="light" title="Light" aria-label="Light mode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button class="theme-btn" data-theme="gold" title="Gold" aria-label="Gold mode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </button>
+          <button class="theme-btn" data-theme="silver" title="Silver" aria-label="Silver mode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -58,7 +72,7 @@
             <span class="stat-label">Projects Built</span>
           </div>
           <div class="stat">
-            <span class="stat-number">5+</span>
+            <span class="stat-number">7+</span>
             <span class="stat-label">Years Experience</span>
           </div>
           <div class="stat">
@@ -227,9 +241,14 @@
           <span class="section-tag">My Work</span>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-desc">A selection of systems and platforms I've designed and built.</p>
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="live">Live</button>
+            <button class="filter-btn" data-filter="dev">In Development</button>
+          </div>
         </div>
         <div class="projects-grid">
-          <div class="project-card project-featured">
+          <div class="project-card project-featured" data-status="live">
             <div class="project-meta">
               <span class="project-type">Education Platform</span>
               <span class="project-status status-live">Live</span>
@@ -240,7 +259,7 @@
               <span>Laravel</span><span>MySQL</span><span>REST API</span><span>Flutter</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">School Management</span>
               <span class="project-status status-live">Live</span>
@@ -251,7 +270,7 @@
               <span>Laravel</span><span>Multi-tenant</span><span>MySQL</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="dev">
             <div class="project-type-wrap">
               <span class="project-type">Document Management</span>
             </div>
@@ -261,9 +280,10 @@
               <span>Laravel</span><span>RBAC</span><span>Search</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">QR Platform</span>
+              <span class="project-status status-live">Live</span>
             </div>
             <h3>SmartQR</h3>
             <p>Dynamic QR code generation and management platform for business operations, attendance tracking, and asset management.</p>
@@ -271,7 +291,7 @@
               <span>PHP</span><span>QR Engine</span><span>API</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="dev">
             <div class="project-meta">
               <span class="project-type">FinTech</span>
             </div>
@@ -281,9 +301,10 @@
               <span>Laravel</span><span>Payment API</span><span>Security</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">Communication</span>
+              <span class="project-status status-live">Live</span>
             </div>
             <h3>WhatsApp Bot</h3>
             <p>Automated WhatsApp messaging bot for business communication, customer support, and notification delivery at scale.</p>
@@ -291,9 +312,10 @@
               <span>Node.js</span><span>WhatsApp API</span><span>Automation</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">Network Security</span>
+              <span class="project-status status-live">Live</span>
             </div>
             <h3>WiFi Portal</h3>
             <p>WiFi hotspot billing portal with captive portal, mobile money payments (M-Pesa, Airtel Money, Tigo Pesa), MikroTik RouterOS integration, and automatic session management.</p>
@@ -301,7 +323,7 @@
               <span>Node.js</span><span>Express</span><span>MikroTik</span><span>SQLite</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="dev">
             <div class="project-meta">
               <span class="project-type">Data Analytics</span>
             </div>
@@ -311,9 +333,10 @@
               <span>Laravel</span><span>Analytics</span><span>Dashboard</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">Server Management</span>
+              <span class="project-status status-live">Live</span>
             </div>
             <h3>cPanel</h3>
             <p>Secure web-based file and database manager for cPanel shared hosting environments. Password-protected interface for managing project files, editing code, and administering MySQL databases.</p>
@@ -321,10 +344,9 @@
               <span>PHP</span><span>MySQL</span><span>File Manager</span><span>Security</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="dev">
             <div class="project-meta">
               <span class="project-type">Mobile App</span>
-              <span class="project-status status-live">Live</span>
             </div>
             <h3>GocharlarB</h3>
             <p>Multi-modal transportation booking app for the East African market. Book rides across Daladala, Boda Boda, Bajaj, SGR, taxis, and regional buses with 98+ routes, real-time alerts, and AI-powered travel assistant.</p>
@@ -332,7 +354,7 @@
               <span>Flutter</span><span>Material 3</span><span>Biometrics</span><span>Lottie</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">Mobile App</span>
               <span class="project-status status-live">Live</span>
@@ -343,7 +365,7 @@
               <span>Flutter</span><span>Hive</span><span>REST API</span><span>PDF Viewer</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-status="live">
             <div class="project-meta">
               <span class="project-type">E-Commerce</span>
               <span class="project-status status-live">Live</span>
@@ -352,6 +374,49 @@
             <p>Small business e-commerce storefront for cleaning products with product catalog, search &amp; filtering, WhatsApp ordering integration, Cloudinary image hosting, and an admin dashboard.</p>
             <div class="project-tech">
               <span>Next.js</span><span>TypeScript</span><span>Firebase</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="project-card" data-status="live">
+            <div class="project-meta">
+              <span class="project-type">Organization Website</span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>Casuli</h3>
+            <p>Organizational website with admin dashboard for managing content, team members, projects, and testimonials. Features role-based access control and dynamic public-facing pages.</p>
+            <div class="project-tech">
+              <span>Laravel 12</span><span>Tailwind CSS</span><span>Alpine.js</span><span>Spatie RBAC</span>
+            </div>
+          </div>
+          <div class="project-card" data-status="dev">
+            <div class="project-meta">
+              <span class="project-type">Messaging Platform</span>
+            </div>
+            <h3>Holly</h3>
+            <p>SMS and messaging system with Africa's Talking integration for bulk SMS communication, notification delivery, and messaging workflows.</p>
+            <div class="project-tech">
+              <span>Laravel 12</span><span>Africa's Talking</span><span>Sanctum</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="project-card" data-status="live">
+            <div class="project-meta">
+              <span class="project-type">Grant Management</span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>Grants (RIGMS)</h3>
+            <p>Research and Innovation Grant Management System for IAE, Tanzania. Streamlines the full grant lifecycle from applicant registration through review and rector approval, with PDF/Excel exports.</p>
+            <div class="project-tech">
+              <span>Laravel</span><span>AdminLTE</span><span>Spatie RBAC</span><span>DomPDF</span>
+            </div>
+          </div>
+          <div class="project-card" data-status="live">
+            <div class="project-meta">
+              <span class="project-type">Admissions Portal</span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>OAS</h3>
+            <p>Online Admission Application System for IAE, Tanzania. Multi-step application forms, NECTA exam result verification, document uploads, and GEPG payment integration.</p>
+            <div class="project-tech">
+              <span>Laravel</span><span>Bootstrap 5</span><span>NECTA API</span><span>GEPG</span>
             </div>
           </div>
         </div>
@@ -453,6 +518,24 @@
     </footer>
 
     <script>
+      // Theme switcher
+      const themeSwitcher = document.getElementById('themeSwitcher');
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      themeSwitcher.querySelector(`[data-theme="${savedTheme}"]`).classList.add('active');
+
+      themeSwitcher.addEventListener('click', (e) => {
+        const btn = e.target.closest('.theme-btn');
+        if (!btn) return;
+        const theme = btn.dataset.theme;
+        document.documentElement.classList.add('theme-transition');
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+        themeSwitcher.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        setTimeout(() => document.documentElement.classList.remove('theme-transition'), 350);
+      });
+
       // Navbar scroll effect
       const nav = document.getElementById('nav');
       window.addEventListener('scroll', () => {
@@ -495,6 +578,25 @@
 
       document.querySelectorAll('.skill-fill, .service-card, .project-card, .section-header').forEach(el => {
         observer.observe(el);
+      });
+
+      // Project filter
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.dataset.status === filter) {
+              card.style.display = '';
+              card.classList.add('in-view');
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
       });
 
       // Cursor blink
